@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "sourceMap": true,
+    "outDir": "dist",// directory for compiler files
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts", "src/index.ts"] // we will compiler evry file inside src directory 
+}
