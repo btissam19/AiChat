@@ -19,10 +19,14 @@ export const validate= (validations:ValidationChain[])=>{
 
 }
 }
-export const singupValidator = [
-    body("name").notEmpty().withMessage("Name is required"),
+export const loginValidator = [
     body("email").trim().isEmail().withMessage("Email is required"),
     body("password").trim().isLength({min:6}).withMessage("password should be more than 6 characters")
+]
+
+export const singupValidator = [
+    body("name").notEmpty().withMessage("Name is required"),
+    ...loginValidator
 ]
 
 
